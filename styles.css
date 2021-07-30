@@ -2,7 +2,7 @@ body {
     background-color: black;
     color: lightgreen;
     font-family: 'Roboto Mono', monospace;
-    background-image: url("simages/retro-background.jpg");
+    background-image: url("./images/retro-background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,7 +77,7 @@ h3 {
     grid-area: robot;
     height: 100%;
     width: 100%;
-    background-image: url("images/robot-unscreen.gif");
+    background-image: url("./images/robot-unscreen.gif");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
