@@ -2,7 +2,7 @@ body {
     background-color: black;
     color: lightgreen;
     font-family: 'Roboto Mono', monospace;
-    background-image: url(images/retro-background.jpg);
+    background-image: url("simages/retro-background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
