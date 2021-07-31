@@ -1,9 +1,9 @@
 const button = document.getElementById('joke-button');
 
+const jokeText = document.querySelector("h3");
+
 // get joke from joke API
 async function getJoke() {
-    // 
-    let jokeText = document.querySelector("h3");
 
     // joke variable to use in the if statment to determine if it is a two part joke
     let joke = "";
@@ -63,7 +63,9 @@ let titleClickCount = 0;
 
 function changeTitle() {
     if (titleClickCount >= 20) {
-        title.innerHTML = (prompt("What's you name?") + "'s Comedy Show");
+        let newRobotName = prompt("What should we call this robot?")
+        title.innerHTML = (newRobotName + "'s Comedy Show");
+        jokeText.innerHTML = ("<h3> Hello. My name is " + newRobotName + ". <br><br>Want to hear a joke? </h3>");
     } else {
         titleClickCount++;
     }
