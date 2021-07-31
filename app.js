@@ -48,8 +48,23 @@ let music = new Audio("./audio/8bit.mp3");
 function backgroundMusic() {
     if (robotClickCount >= 20) {
         music.play();
-        robotClickCount++;
     } else {
         robotClickCount++;
     }
 };
+
+// title easter egg
+
+let title = document.querySelector("h1");
+
+title.addEventListener("click", changeTitle);
+
+let titleClickCount = 0;
+
+function changeTitle() {
+    if (titleClickCount >= 20) {
+        title.innerHTML = (prompt("What's you name?") + "'s Comedy Show");
+    } else {
+        titleClickCount++;
+    }
+}
