@@ -43,7 +43,7 @@ robot.addEventListener('click', backgroundMusic);
 
 let backgroundMusicCount = 0;
 
-let music = new Audio("/audio/8bit.mp3")
+let music = new Audio("./audio/8bit.mp3")
 
 function backgroundMusic() {
     if (backgroundMusicCount === 0) {
