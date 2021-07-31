@@ -1,15 +1,22 @@
+// API KEYS
+
+var token = config.MY_API_TOKEN;
+var key = config.SECRET_API_KEY;
+
+// DOM Elements
+
 const button = document.getElementById('joke-button');
 
-// event listner 
 button.addEventListener('click', getJoke);
 
 const jokeText = document.querySelector("h3");
 
-// joke variable to use in the if statment to determine if it is a two part joke
-let joke = "";
 
 // get joke from joke API
 async function getJoke() {
+
+    // joke variable to use in the if statment to determine if it is a two part joke
+    let joke = "";
 
 
     const apiUrl = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
@@ -25,15 +32,23 @@ async function getJoke() {
         } else {
             joke = data.joke;
         };
-        console.log(joke);
 
         jokeText.innerHTML = joke;
+
+        textToSpeech(joke);
 
     } catch (error) {
         console.log("whoops", error);
 
     }
 };
+
+// Text to speech API
+
+function textToSpeech(text) {
+    console.log(text);
+}
+
 
 
 // music easter egg
