@@ -11,6 +11,9 @@ button.addEventListener('click', getJoke);
 
 const jokeText = document.querySelector("h3");
 
+let title = document.querySelector("h1");
+
+
 // run the h1 through a text to speech on load
 
 textToSpeech(jokeText.textContent);
@@ -86,6 +89,9 @@ function backgroundMusic() {
     if (robotClickCount >= 20 && robotClickCount % 2 == 0) {
         music.play();
         robotClickCount++;
+        alert("Song: Sexy Bit Jazz \r\nArtist: Circuit Bent\r\n URL: https://circuitbentobox.bandcamp.com");
+
+
     } else {
         if (robotClickCount >= 20 && (robotClickCount % 2 == 1)) {
             music.pause();
@@ -97,8 +103,6 @@ function backgroundMusic() {
 };
 
 // title easter egg
-
-let title = document.querySelector("h1");
 
 title.addEventListener("click", changeTitle);
 
