@@ -36,11 +36,12 @@ h1 {
 
 button {
     grid-area: button;
+    padding: 1%;
     font-size: large;
     align-self: center;
     justify-self: center;
     font-family: 'Roboto Mono', monospace;
-    color: lightgreen;
+    color: white;
     background-color: darkmagenta;
     border-radius: 5px;
     box-shadow: 2px 2px 10px 2px;
