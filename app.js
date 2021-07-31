@@ -1,7 +1,6 @@
 // api key
 let key = "49ed000c1";
 
-
 // DOM Elements
 
 const button = document.getElementById('joke-button');
