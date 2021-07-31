@@ -14,10 +14,6 @@ const jokeText = document.querySelector("h3");
 let title = document.querySelector("h1");
 
 
-// run the h1 through a text to speech on load
-
-textToSpeech(jokeText);
-
 
 // get joke from joke API
 async function getJoke() {
