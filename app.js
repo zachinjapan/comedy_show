@@ -11,6 +11,10 @@ button.addEventListener('click', getJoke);
 
 const jokeText = document.querySelector("h3");
 
+// run the h1 through a text to speech on load
+
+textToSpeech(jokeText.textContent);
+
 
 // get joke from joke API
 async function getJoke() {
@@ -37,6 +41,8 @@ async function getJoke() {
 
         textToSpeech(joke);
 
+
+
     } catch (error) {
         console.log("whoops", error);
 
@@ -44,10 +50,25 @@ async function getJoke() {
 };
 
 // Text to speech API
+// VoiceRSS Speech Function
 
 function textToSpeech(text) {
-    console.log(text);
+    let jokeString = text;
+
+    // VoiceRSS Speech Parameters
+    VoiceRSS.speech({
+        key: key,
+        src: jokeString,
+        hl: 'en-us',
+        r: 0,
+        c: 'mp3',
+        f: '44khz_16bit_stereo',
+        ssml: false,
+    });
 }
+
+// voiceRSS javascript
+
 
 
 
@@ -88,6 +109,7 @@ function changeTitle() {
         let newRobotName = prompt("What should we call this robot?")
         title.innerHTML = (newRobotName + "'s Comedy Show");
         jokeText.innerHTML = ("<h3> Hello. My name is " + newRobotName + ". <br><br>Want to hear a joke? </h3>");
+        textToSpeech(jokeText.textContent);
     } else {
         titleClickCount++;
     }
