@@ -36,8 +36,7 @@ h1 {
 
 button {
     grid-area: button;
-    height: 5rem;
-    width: fit-content;
+    font-size: large;
     align-self: center;
     justify-self: center;
     font-family: 'Roboto Mono', monospace;
@@ -82,4 +81,14 @@ h3 {
     background-size: contain;
     background-position: left center;
     z-index: 4;
+}
+
+audio {
+    display: grid;
+    grid-area: robot;
+    background-position: left center;
+    justify-self: center;
+    align-self: flex-start;
+
+    z-index: 7;
 }

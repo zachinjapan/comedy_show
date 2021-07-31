@@ -1,5 +1,7 @@
 const button = document.getElementById('joke-button');
 
+const robot = document.getElementById("robot");
+
 // get joke from joke API
 async function getJoke() {
     // 
@@ -33,3 +35,24 @@ async function getJoke() {
 
 // event listner 
 button.addEventListener('click', getJoke);
+
+
+robot.addEventListener('click', backgroundMusic);
+
+// background music
+
+let backgroundMusicCount = 0;
+
+let music = new Audio("/audio/8bit.mp3")
+
+function backgroundMusic() {
+    if (backgroundMusicCount === 0) {
+        music.play();
+        backgroundMusicCount++;
+    } else {
+        console.log("music time is over");
+        console.log(backgroundMusicCount);
+        music.pause();
+        backgroundMusicCount--;
+    }
+};
