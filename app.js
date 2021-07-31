@@ -16,7 +16,7 @@ let title = document.querySelector("h1");
 
 // run the h1 through a text to speech on load
 
-textToSpeech(jokeText.textContent);
+textToSpeech(jokeText);
 
 
 // get joke from joke API
@@ -45,7 +45,6 @@ async function getJoke() {
         textToSpeech(joke);
 
 
-
     } catch (error) {
         console.log("whoops", error);
 
@@ -56,6 +55,7 @@ async function getJoke() {
 // VoiceRSS Speech Function
 
 function textToSpeech(text) {
+
     let jokeString = text;
 
     // VoiceRSS Speech Parameters
@@ -69,9 +69,6 @@ function textToSpeech(text) {
         ssml: false,
     });
 }
-
-// voiceRSS javascript
-
 
 
 
@@ -106,14 +103,15 @@ function backgroundMusic() {
 
 title.addEventListener("click", changeTitle);
 
-let titleClickCount = 0;
+let titleClickCount = 1;
 
 function changeTitle() {
-    if (titleClickCount >= 20) {
+    if (titleClickCount === 20) {
         let newRobotName = prompt("What should we call this robot?")
         title.innerHTML = (newRobotName + "'s Comedy Show");
         jokeText.innerHTML = ("<h3> Hello. My name is " + newRobotName + ". <br><br>Want to hear a joke? </h3>");
         textToSpeech(jokeText.textContent);
+        titleClickCount++;
     } else {
         titleClickCount++;
     }
