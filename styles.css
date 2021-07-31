@@ -65,7 +65,7 @@ h3 {
     height: 100%;
     width: 100%;
     background-color: black;
-    opacity: 0.3;
+    opacity: 0.4;
     z-index: -3;
     align-self: center;
     justify-self: center;
@@ -82,14 +82,4 @@ h3 {
     background-size: contain;
     background-position: left center;
     z-index: 4;
-}
-
-audio {
-    display: grid;
-    grid-area: robot;
-    background-position: left center;
-    justify-self: center;
-    align-self: flex-start;
-
-    z-index: 7;
 }
