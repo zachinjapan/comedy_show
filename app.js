@@ -43,7 +43,7 @@ async function getJoke() {
 
     }
 };
-
+key = "49ed000c19b2490cb283bc3ce8bb0277";
 // Text to speech API
 // VoiceRSS Speech Function
 
@@ -108,4 +108,14 @@ function changeTitle() {
     } else {
         titleClickCount++;
     }
+}
+
+// text easter egg
+
+jokeText.addEventListener("click", customText);
+
+let jokeClickCount = 1;
+
+function customText() {
+
 }
