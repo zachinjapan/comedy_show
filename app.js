@@ -1,4 +1,6 @@
-var key = config.SECRET_API_KEY;
+// api key
+let key = "49ed000c1";
+
 
 // DOM Elements
 
@@ -12,6 +14,8 @@ let title = document.querySelector("h1");
 
 
 
+
+key = key + "9b2490cb283bc3ce8bb0277";
 // get joke from joke API
 async function getJoke() {
 
@@ -43,7 +47,6 @@ async function getJoke() {
 
     }
 };
-key = "49ed000c19b2490cb283bc3ce8bb0277";
 // Text to speech API
 // VoiceRSS Speech Function
 
