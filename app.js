@@ -25,13 +25,14 @@ async function getJoke() {
     let joke = "";
 
 
-    const apiUrl = "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+    const apiUrl = "https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Pun,Spooky,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 
     try {
         // fetch the api
         const response = await fetch(apiUrl);
         // put the response into a variable
         const data = await response.json();
+        console.log(data);
         // testing if it is a one part or two part joke
         if (data.setup) {
             joke = `${data.setup} ... ${data.delivery}`;
@@ -40,6 +41,7 @@ async function getJoke() {
         };
 
         jokeText.innerHTML = joke;
+
 
         textToSpeech(joke);
 
@@ -135,6 +137,5 @@ function disableButton() {
 
         button.style.visibility = "visible";
         button.disabled = false;
-        console.log('Button Activated')
     }, 9000)
 }
