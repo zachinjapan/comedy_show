@@ -18,6 +18,9 @@ key = key + "9b2490cb283bc3ce8bb0277";
 // get joke from joke API
 async function getJoke() {
 
+
+    disableButton();
+
     // joke variable to use in the if statment to determine if it is a two part joke
     let joke = "";
 
@@ -63,6 +66,7 @@ function textToSpeech(text) {
         f: '44khz_16bit_stereo',
         ssml: false,
     });
+
 }
 
 
@@ -120,4 +124,17 @@ let jokeClickCount = 1;
 
 function customText() {
 
+}
+
+// disable button function
+
+function disableButton() {
+    button.style.visibility = "hidden";
+    button.disabled = true;
+    setTimeout(() => {
+
+        button.style.visibility = "visible";
+        button.disabled = false;
+        console.log('Button Activated')
+    }, 9000)
 }
