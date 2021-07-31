@@ -1,7 +1,5 @@
 const button = document.getElementById('joke-button');
 
-const robot = document.getElementById("robot");
-
 // get joke from joke API
 async function getJoke() {
     // 
@@ -35,3 +33,23 @@ async function getJoke() {
 
 // event listner 
 button.addEventListener('click', getJoke);
+
+
+// music easter egg
+
+const robot = document.getElementById("robot");
+
+robot.addEventListener('click', backgroundMusic);
+
+let robotClickCount = 0;
+
+let music = new Audio("./audio/8bit.mp3");
+
+function backgroundMusic() {
+    if (robotClickCount >= 20) {
+        music.play();
+        robotClickCount++;
+    } else {
+        robotClickCount++;
+    }
+};
