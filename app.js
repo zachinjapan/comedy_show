@@ -1,5 +1,7 @@
-// api key
-let key = "49ed000c1";
+// API KEYS
+
+var token = config.MY_API_TOKEN;
+var key = config.SECRET_API_KEY;
 
 // DOM Elements
 
@@ -11,7 +13,6 @@ const jokeText = document.querySelector("h3");
 
 let title = document.querySelector("h1");
 
-key = key + "9b2490cb283bc3ce8bb0277";
 // get joke from joke API
 async function getJoke() {
 
