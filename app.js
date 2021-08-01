@@ -11,9 +11,6 @@ const jokeText = document.querySelector("h3");
 
 let title = document.querySelector("h1");
 
-
-
-
 key = key + "9b2490cb283bc3ce8bb0277";
 // get joke from joke API
 async function getJoke() {
@@ -51,6 +48,8 @@ async function getJoke() {
 
     }
 };
+
+
 // Text to speech API
 // VoiceRSS Speech Function
 
