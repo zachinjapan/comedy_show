@@ -70,20 +70,6 @@ h3 {
 }
 
 
-/* .text-background {
-    grid-area: text;
-    height: 100%;
-    width: 100%;
-    background-color: black;
-    opacity: 0.5;
-    z-index: -3;
-    align-self: center;
-    justify-self: center;
-    border-radius: 10%;
-    box-shadow: 0 10px 20px -5px rgba(248, 248, 248, 0.9);
-
-} */
-
 .dancing-robot {
     display: grid;
     grid-area: robot;
@@ -119,4 +105,12 @@ h3 {
     }
 
 
+}
+
+@media (min-width: 768px) {
+
+    .dancing-robot {
+        background-size: cover;
+
+    }
 }
