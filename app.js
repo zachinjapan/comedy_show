@@ -1,7 +1,7 @@
 // API token and key
 
-var token = config.MY_API_TOKEN;
-var key = config.SECRET_API_KEY;
+const token = config.MY_API_TOKEN;
+const key = config.SECRET_API_KEY;
 
 // DOM Elements
 
@@ -11,7 +11,7 @@ button.addEventListener('click', getJoke);
 
 const jokeText = document.querySelector("h3");
 
-let title = document.querySelector("h1");
+const title = document.querySelector("h1");
 
 // get joke from joke API
 async function getJoke() {
