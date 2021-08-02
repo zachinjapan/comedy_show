@@ -16,7 +16,6 @@ let title = document.querySelector("h1");
 // get joke from joke API
 async function getJoke() {
 
-
     disableButton();
 
     // joke variable to use in the if statment to determine if it is a two part joke
@@ -118,15 +117,6 @@ function changeTitle() {
     }
 }
 
-// text easter egg
-
-jokeText.addEventListener("click", customText);
-
-let jokeClickCount = 1;
-
-function customText() {
-
-}
 
 // disable button function
 
