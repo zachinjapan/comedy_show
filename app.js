@@ -13,6 +13,30 @@ const jokeText = document.querySelector("h3");
 
 const title = document.querySelector("h1");
 
+// type of jokes DOM Elements 
+
+const programmingButton = document.getElementById('programming');
+
+const miscellaneousButton = document.getElementById('miscellaneous');
+
+const punButton = document.getElementById('pun');
+
+const spookyButton = document.getElementById('spooky');
+
+const darkButton = document.getElementById("dark");
+
+const christmasButton = document.getElementById("christmas");
+
+
+// variables to decide type of joke
+
+let Programming = "Programming,";
+let Pun = "Pun,";
+let Spooky = "Spooky,";
+let Dark = "Dark,"
+let Christmas = "Christmas,";
+let Miscellaneous = "Miscellaneous";
+
 // get joke from joke API
 async function getJoke() {
 
@@ -21,8 +45,13 @@ async function getJoke() {
     // joke variable to use in the if statment to determine if it is a two part joke
     let joke = "";
 
+    let apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous;
 
-    const apiUrl = "https://v2.jokeapi.dev/joke/Programming,Miscellaneous,Pun,Spooky,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+    console.log(apiUrl);
+    fixFormating();
+    console.log(apiUrl);
+
+    apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous;
 
     try {
         // fetch the api
@@ -128,4 +157,103 @@ function disableButton() {
         button.style.visibility = "visible";
         button.disabled = false;
     }, 9000)
+}
+
+// choose joke type function
+
+
+programmingButton.addEventListener("click", asyfunction() {
+    if (Programming === "Programming,") {
+        programmingButton.classList.remove("joke-type-button-on");
+        Programming = "";
+        console.log("no programming jokes");
+
+    } else {
+        programmingButton.classList.add("joke-type-button-on");
+        Programming = "Programming,";
+        console.log("programming jokes included");
+    }
+});
+
+
+miscellaneousButton.addEventListener("click", function () {
+    if (Miscellaneous === "Miscellaneous") {
+        miscellaneousButton.classList.remove("joke-type-button-on");
+        Miscellaneous = "";
+        console.log("no Misc jokes");
+    } else {
+        miscellaneousButton.classList.add("joke-type-button-on");
+        Miscellaneous = "Miscellaneous";
+        console.log("Misc jokes included");
+    }
+});
+
+
+punButton.addEventListener("click", function () {
+    if (Pun === "Pun,") {
+        punButton.classList.remove("joke-type-button-on");
+        Pun = "";
+        console.log("no pun jokes");
+    } else {
+        punButton.classList.add("joke-type-button-on");
+        Pun = "Pun,";
+        console.log("Pun jokes included");
+    }
+});
+
+
+spookyButton.addEventListener("click", function () {
+    if (Spooky === "Spooky,") {
+        spookyButton.classList.remove("joke-type-button-on");
+        Spooky = "";
+        console.log("no spooky jokes");
+    } else {
+        spookyButton.classList.add("joke-type-button-on");
+        Spooky = "Spooky,";
+        console.log("Spooky jokes included");
+    }
+});
+
+
+darkButton.addEventListener("click", function () {
+    if (Dark === "Dark,") {
+        darkButton.classList.remove("joke-type-button-on");
+        Dark = "";
+        console.log("no dark jokes");
+    } else {
+        darkButton.classList.add("joke-type-button-on");
+        Dark = "Dark,";
+        console.log("dark jokes included");
+    }
+});
+
+
+christmasButton.addEventListener("click", function () {
+    if (Christmas === "Christmas,") {
+        christmasButton.classList.remove("joke-type-button-on");
+        Christmas = "";
+        console.log("no christmas jokes");
+    } else {
+        christmasButton.classList.add("joke-type-button-on");
+        Christmas = "Christmas,";
+        console.log("Christmas jokes included");
+    }
+});
+
+
+function fixFormating() {
+    if (Miscellaneous === "" && Christmas === "Christmas,") {
+        Christmas = "Christmas";
+    } else if (Miscellaneous === "" && Christmas === "") {
+        Dark = "Dark"
+    } else if (Miscellaneous === "" && Christmas === "" && Dark === "") {
+        Spooky = "Spooky"
+    } else if (Miscellaneous === "" && Christmas === "" && Dark === "" && Spooky === "") {
+        Pun = "Pun"
+    } else if (Miscellaneous === "" && Christmas === "" && Dark === "" && Spooky === "" && Pun === "") {
+        Programming = "Programming"
+    } else {
+        console.log("omg ")
+    }
+
 }

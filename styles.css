@@ -50,7 +50,7 @@ button {
     z-index: 10;
 }
 
-button:hover {
+#joke-button:hover {
     background-color: #3e8e41;
     color: white;
 }
@@ -68,6 +68,32 @@ h3 {
     border-radius: 5%;
     box-shadow: 0px 3px 10px -5px rgba(117, 255, 4, 0.959);
 }
+
+.joke-type-row {
+    display: flex;
+    grid-area: text;
+    align-self: flex-end;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.joke-type-button {
+    height: 50px;
+    width: 100px;
+    font-size: 75%;
+    border-radius: 50%;
+    background-color: gray;
+    color: white;
+    border: 3px dashed black;
+}
+
+.joke-type-button-on {
+    background-color: #3e8e41;
+    color: white;
+}
+
+/* left side */
 
 
 .dancing-robot {
