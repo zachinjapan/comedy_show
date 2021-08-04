@@ -69,7 +69,7 @@ async function getJoke() {
         jokeText.innerHTML = joke;
 
 
-        textToSpeech(joke);
+        // textToSpeech(joke);
 
 
     } catch (error) {
