@@ -159,7 +159,7 @@ function disableButton() {
 
         button.style.visibility = "visible";
         button.disabled = false;
-    }, 1000)
+    }, 500)
 };
 
 // choose joke type function
