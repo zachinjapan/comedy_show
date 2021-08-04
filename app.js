@@ -1,4 +1,4 @@
-// API token and key
+// API token and ft
 
 // const token = config.MY_API_TOKEN;
 
@@ -159,7 +159,7 @@ function disableButton() {
 
         button.style.visibility = "visible";
         button.disabled = false;
-    }, 9000)
+    }, 1000)
 };
 
 // choose joke type function
