@@ -1,7 +1,8 @@
 // API token and key
 
-const token = config.MY_API_TOKEN;
-const key = config.SECRET_API_KEY;
+// const token = config.MY_API_TOKEN;
+
+// const key = config.SECRET_API_KEY;
 
 // DOM Elements
 

@@ -81,7 +81,7 @@ h3 {
 .joke-type-button {
     height: 50px;
     width: 100px;
-    font-size: 75%;
+    font-size: 70%;
     border-radius: 50%;
     background-color: gray;
     color: white;
@@ -94,6 +94,7 @@ h3 {
 .joke-type-button-on {
     background-color: #3e8e41;
     color: white;
+    font-weight: bold;
 }
 
 /* left side */
@@ -137,8 +138,23 @@ h3 {
         width: 29%;
         height: 10%;
         font-size: 6%;
+        opacity: 1;
+        color: black;
+        font-weight: bold;
+        background-color: rgb(255, 255, 255);
+        border: 1px dashed black;
     }
 
+    .joke-type-button-on {
+        width: 29%;
+        height: 10%;
+        font-size: 6%;
+        opacity: 1;
+        color: black;
+        font-weight: bold;
+        background-color: rgb(171, 248, 95);
+        border: 1px dashed black;
+    }
 }
 
 /* large devices */
