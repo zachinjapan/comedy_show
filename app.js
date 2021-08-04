@@ -76,6 +76,8 @@ async function getJoke() {
         console.log("whoops", error);
 
     }
+
+    resetFormating();
 };
 
 
@@ -144,7 +146,7 @@ function changeTitle() {
     } else {
         titleClickCount++;
     }
-}
+};
 
 
 // disable button function
@@ -157,12 +159,12 @@ function disableButton() {
         button.style.visibility = "visible";
         button.disabled = false;
     }, 9000)
-}
+};
 
 // choose joke type function
 
 
-programmingButton.addEventListener("click", asyfunction() {
+programmingButton.addEventListener("click", function () {
     if (Programming === "Programming,") {
         programmingButton.classList.remove("joke-type-button-on");
         Programming = "";
@@ -242,18 +244,42 @@ christmasButton.addEventListener("click", function () {
 
 
 function fixFormating() {
-    if (Miscellaneous === "" && Christmas === "Christmas,") {
-        Christmas = "Christmas";
-    } else if (Miscellaneous === "" && Christmas === "") {
-        Dark = "Dark"
-    } else if (Miscellaneous === "" && Christmas === "" && Dark === "") {
-        Spooky = "Spooky"
+    if (Miscellaneous === "" && Christmas === "" && Dark === "" && Spooky === "" && Pun === "") {
+        Programming = "Programming"
     } else if (Miscellaneous === "" && Christmas === "" && Dark === "" && Spooky === "") {
         Pun = "Pun"
-    } else if (Miscellaneous === "" && Christmas === "" && Dark === "" && Spooky === "" && Pun === "") {
-        Programming = "Programming"
+    } else if (Miscellaneous === "" && Christmas === "" && Dark === "") {
+        Spooky = "Spooky"
+    } else if (Miscellaneous === "" && Christmas === "") {
+        Dark = "Dark"
+    } else if (Miscellaneous === "" && Christmas === "Christmas,") {
+        Christmas = "Christmas";
     } else {
-        console.log("omg ")
+        console.log("didn't fix formatting ")
     }
 
+}
+
+function resetFormating() {
+    if (Christmas === "Christmas") {
+        Christmas = "Christmas,"
+    }
+
+    if (Dark === "Dark") {
+        Dark = "Dark,"
+    }
+
+    if (Spooky === "Spooky") {
+        Spooky = "Spooky,"
+    }
+
+    if (Pun === "Pun") {
+        Pun = "Pun,"
+    }
+
+    if (Programming === "Programming") {
+        Programming = "Programming,"
+    } else {
+        console.log("No reset formating needed")
+    }
 }
