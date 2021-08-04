@@ -45,13 +45,13 @@ async function getJoke() {
     // joke variable to use in the if statment to determine if it is a two part joke
     let joke = "";
 
-    let apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous;
+    let apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 
     console.log(apiUrl);
     fixFormating();
     console.log(apiUrl);
 
-    apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous;
+    apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 
     try {
         // fetch the api
