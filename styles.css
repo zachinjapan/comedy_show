@@ -88,6 +88,7 @@ h3 {
     border: 3px dashed black;
     opacity: 0.8;
     box-shadow: none;
+    z-index: 99;
 }
 
 .joke-type-button-on {
