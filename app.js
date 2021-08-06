@@ -243,6 +243,7 @@ christmasButton.addEventListener("click", function () {
     }
 });
 
+// fixes the formating to make sure the last tag doesn't end in a ,""
 
 function fixFormating() {
     if (Miscellaneous === "" && Christmas === "" && Dark === "" && Spooky === "" && Pun === "") {
@@ -260,6 +261,8 @@ function fixFormating() {
     }
 
 }
+
+// resets the formating so that when tags are added and subtracted they include the comma and sets the stage for the fix formating function
 
 function resetFormating() {
     if (Christmas === "Christmas") {
