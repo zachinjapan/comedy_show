@@ -2,7 +2,7 @@ body {
     background-color: black;
     color: lightgreen;
     font-family: 'Roboto Mono', monospace;
-    background-image: url(./images/background.jpg);
+    background-image: url(/images/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -115,7 +115,7 @@ h3 {
     grid-area: robot;
     height: 100%;
     width: 100%;
-    background-image: url(./images/robot1.gif);
+    background-image: url(/images/robot1.gif);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
