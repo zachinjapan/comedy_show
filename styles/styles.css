@@ -157,7 +157,7 @@ h3 {
     .joke-type-button {
         width: 35%;
         height: 30px;
-        font-size: 10%;
+        font-size: 100%;
         opacity: 1;
         color: black;
         font-weight: bold;
