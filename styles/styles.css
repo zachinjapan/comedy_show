@@ -2,7 +2,7 @@ body {
     background-color: black;
     color: lightgreen;
     font-family: 'Roboto Mono', monospace;
-    background-image: url(./images/background.jpg);
+    background-image: url(/images/background.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,6 +13,10 @@ body {
     User-select: none;
 
 
+}
+
+h3 {
+    margin-bottom: 70px;
 }
 
 /* container */
@@ -115,7 +119,7 @@ h3 {
     grid-area: robot;
     height: 100%;
     width: 100%;
-    background-image: url(./images/robot1.gif);
+    background-image: url(/images/robot1.gif);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: left center;
@@ -126,6 +130,10 @@ h3 {
 /* mobile re-sizing */
 
 @media (max-width: 480px) {
+    h3 {
+        margin-bottom: 110px;
+    }
+
     .container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 2fr 1fr;
@@ -146,8 +154,8 @@ h3 {
 
     .joke-type-button {
         width: 35%;
-        height: 15%;
-        font-size: 8%;
+        height: 30px;
+        font-size: 10%;
         opacity: 1;
         color: black;
         font-weight: bold;

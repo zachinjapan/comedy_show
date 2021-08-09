@@ -1,5 +1,5 @@
 // top secret free key 
-const key = config.SECRET_API_KEY;
+const key = "53fcb560bcac4b8dbdf39007958f99b7";
 
 // DOM Elements
 
@@ -164,7 +164,7 @@ function disableButton() {
 
         button.style.visibility = "visible";
         button.disabled = false;
-    }, 8000)
+    }, 10000)
 };
 
 // choose joke type function
