@@ -55,9 +55,7 @@ async function getJoke() {
 
     let apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 
-    console.log(apiUrl);
     fixFormating();
-    console.log(apiUrl);
 
     apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 
@@ -174,12 +172,10 @@ programmingButton.addEventListener("click", function () {
     if (Programming === "Programming,") {
         programmingButton.classList.remove("joke-type-button-on");
         Programming = "";
-        console.log("no programming jokes");
 
     } else {
         programmingButton.classList.add("joke-type-button-on");
         Programming = "Programming,";
-        console.log("programming jokes included");
     }
 });
 
@@ -188,11 +184,9 @@ miscellaneousButton.addEventListener("click", function () {
     if (Miscellaneous === "Miscellaneous") {
         miscellaneousButton.classList.remove("joke-type-button-on");
         Miscellaneous = "";
-        console.log("no Misc jokes");
     } else {
         miscellaneousButton.classList.add("joke-type-button-on");
         Miscellaneous = "Miscellaneous";
-        console.log("Misc jokes included");
     }
 });
 
@@ -201,11 +195,9 @@ punButton.addEventListener("click", function () {
     if (Pun === "Pun,") {
         punButton.classList.remove("joke-type-button-on");
         Pun = "";
-        console.log("no pun jokes");
     } else {
         punButton.classList.add("joke-type-button-on");
         Pun = "Pun,";
-        console.log("Pun jokes included");
     }
 });
 
@@ -214,11 +206,9 @@ spookyButton.addEventListener("click", function () {
     if (Spooky === "Spooky,") {
         spookyButton.classList.remove("joke-type-button-on");
         Spooky = "";
-        console.log("no spooky jokes");
     } else {
         spookyButton.classList.add("joke-type-button-on");
         Spooky = "Spooky,";
-        console.log("Spooky jokes included");
     }
 });
 
@@ -227,11 +217,9 @@ darkButton.addEventListener("click", function () {
     if (Dark === "Dark,") {
         darkButton.classList.remove("joke-type-button-on");
         Dark = "";
-        console.log("no dark jokes");
     } else {
         darkButton.classList.add("joke-type-button-on");
         Dark = "Dark,";
-        console.log("dark jokes included");
     }
 });
 
@@ -240,11 +228,9 @@ christmasButton.addEventListener("click", function () {
     if (Christmas === "Christmas,") {
         christmasButton.classList.remove("joke-type-button-on");
         Christmas = "";
-        console.log("no christmas jokes");
     } else {
         christmasButton.classList.add("joke-type-button-on");
         Christmas = "Christmas,";
-        console.log("Christmas jokes included");
     }
 });
 
