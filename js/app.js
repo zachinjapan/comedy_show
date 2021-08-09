@@ -64,7 +64,6 @@ async function getJoke() {
         const response = await fetch(apiUrl);
         // put the response into a variable
         const data = await response.json();
-        console.log(data);
         // testing if it is a one part or two part joke
         if (data.setup) {
             joke = `${data.setup} ... ${data.delivery}`;
