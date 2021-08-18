@@ -142,14 +142,14 @@ function changeTitle() {
 
 // color changer
 
-colorButton.addEventListener("click", changeColor);
+// colorButton.addEventListener("click", changeColor);
 
-function changeColor() {
+// function changeColor() {
 
-    let randomNumber = Math.floor((Math.random() * 3) + 1);
+//     let randomNumber = Math.floor((Math.random() * 3) + 1);
 
-    robot.style.backgroundImage = 'url' + '(../images/robot' + randomNumber + '.gif)';
-}
+//     robot.style.backgroundImage = 'url' + '(../images/robot' + randomNumber + '.gif)';
+// }
 
 
 // disable button function
