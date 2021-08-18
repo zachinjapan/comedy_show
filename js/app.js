@@ -33,7 +33,7 @@ const musicButton = document.getElementById("music");
 
 const nameButton = document.getElementById("name");
 
-// const colorButton = document.getElementById("robot-color");
+const colorButton = document.getElementById("robot-color");
 
 
 // variables to decide type of joke
@@ -142,14 +142,14 @@ function changeTitle() {
 
 // color changer
 
-// colorButton.addEventListener("click", changeColor);
+colorButton.addEventListener("click", changeColor);
 
-// function changeColor() {
+function changeColor() {
 
-//     let randomNumber = Math.floor((Math.random() * 5) + 1);
+    let randomNumber = Math.floor((Math.random() * 3) + 1);
 
-//     robot.style.backgroundImage = 'url' + '(/images/robot' + randomNumber + '.gif)';
-// }
+    robot.style.backgroundImage = 'url' + '(../images/robot' + randomNumber + '.gif)';
+}
 
 
 // disable button function
