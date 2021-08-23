@@ -155,13 +155,16 @@ function changeTitle() {
 // disable button function
 
 function disableButton() {
-    button.style.visibility = "hidden";
+    button.innerText = "Audio Playing";
+    button.style.opacity = (0.8);
+    button.style.backgroundColor = ("black");
     button.disabled = true;
     setTimeout(() => {
-
-        button.style.visibility = "visible";
+        button.innerText = "New Joke";
+        button.style.opacity = (1);
         button.disabled = false;
-    }, 10000)
+        button.style.backgroundColor = ("darkmagenta");
+    }, 9000)
 };
 
 // choose joke type function
