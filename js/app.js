@@ -38,12 +38,21 @@ const colorButton = document.getElementById("robot-color");
 
 // variables to decide type of joke
 
-let Programming = "Programming,";
-let Pun = "Pun,";
-let Spooky = "Spooky,";
-let Dark = "Dark,"
-let Christmas = "Christmas,";
-let Miscellaneous = "Miscellaneous";
+let Programming = "";
+let Pun = "";
+let Spooky = "";
+let Dark = ""
+let Christmas = "";
+let Miscellaneous = "";
+
+programmingButton.classList.remove("joke-type-button-on");
+punButton.classList.remove("joke-type-button-on");
+spookyButton.classList.remove("joke-type-button-on");
+darkButton.classList.remove("joke-type-button-on");
+christmasButton.classList.remove("joke-type-button-on");
+miscellaneousButton.classList.remove("joke-type-button-on");
+
+
 
 // get joke from joke API
 async function getJoke() {
@@ -140,19 +149,6 @@ function changeTitle() {
     textToSpeech(jokeText.textContent);
 };
 
-// color changer
-
-// colorButton.addEventListener("click", changeColor);
-
-// function changeColor() {
-
-//     let randomNumber = Math.floor((Math.random() * 3) + 1);
-
-//     robot.style.backgroundImage = 'url' + '(../images/robot' + randomNumber + '.gif)';
-// }
-
-
-// disable button function
 
 function disableButton() {
     button.innerText = "Audio Playing";
@@ -164,7 +160,7 @@ function disableButton() {
         button.style.opacity = (1);
         button.disabled = false;
         button.style.backgroundColor = ("darkmagenta");
-    }, 9000)
+    }, 10000)
 };
 
 // choose joke type function
