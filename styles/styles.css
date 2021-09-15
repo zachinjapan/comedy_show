@@ -85,7 +85,7 @@ h3 {
 }
 
 .joke-type-button {
-    height: 50px;
+    /* height: 50px; */
     width: 110px;
     font-size: 75%;
     border-radius: 50%;
