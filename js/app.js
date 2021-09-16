@@ -73,7 +73,17 @@ async function getJoke() {
         const response = await fetch(apiUrl);
         // put the response into a variable
         const data = await response.json();
+
         // testing if it is a one part or two part joke
+        if (data.id !== 135 & data.id !== 177) {
+            // have a party
+        } else {
+            // fetch the api
+            const response = await fetch(apiUrl);
+            // put the response into a variable
+            const data = await response.json();
+        }
+
         if (data.setup) {
             joke = `${data.setup} ... ${data.delivery}`;
         } else {
@@ -81,7 +91,7 @@ async function getJoke() {
         };
 
         jokeText.innerHTML = joke;
-
+        f
 
         textToSpeech(joke);
 
