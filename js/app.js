@@ -131,18 +131,18 @@ function textToSpeech(text) {
 
 musicButton.addEventListener('click', backgroundMusic);
 
-let robotClickCount = 3;
+let musicButtonClickCount = 3;
 
 let music = new Audio("./audio/8bit.mp3");
 
 function backgroundMusic() {
-    if (robotClickCount % 2 === 1) {
+    if (musicButtonClickCount % 2 === 1) {
         music.play();
-        robotClickCount++
+        musicButtonClickCount++
         alert("Song: Sexy Bit Jazz \r\nArtist: Circuit Bent\r\n URL: https://circuitbentobox.bandcamp.com");
     } else {
         music.pause();
-        robotClickCount++;
+        musicButtonClickCount++;
     }
 };
 
