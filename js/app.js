@@ -61,13 +61,16 @@ async function getJoke() {
 
     // joke variable to use in the if statment to determine if it is a two part joke
     let joke = "";
+    let apiUrl = "";
+    if (Programming === "" && Pun === "" && Spooky == "" && Dark == "" && Christmas === "" && Miscellaneous === "") {
+        apiUrl = "https://v2.jokeapi.dev/joke/Programming,Pun,Spooky,Dark,Christmas,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+    } else {
+        apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
 
-    let apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+        fixFormating();
 
-    fixFormating();
-
-    apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
-
+        apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+    };
     try {
         // fetch the api
         const response = await fetch(apiUrl);
@@ -94,6 +97,9 @@ async function getJoke() {
 
 
         textToSpeech(joke);
+
+        console.log(data);
+        console.log(apiUrl);
 
 
     } catch (error) {
@@ -264,6 +270,7 @@ function fixFormating() {
 // resets the formating so that when tags are added and subtracted they include the comma and sets the stage for the fix formating function
 
 function resetFormating() {
+
     if (Christmas === "Christmas") {
         Christmas = "Christmas,"
     }
