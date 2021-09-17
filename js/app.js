@@ -98,9 +98,6 @@ async function getJoke() {
 
         textToSpeech(joke);
 
-        console.log(data);
-        console.log(apiUrl);
-
 
     } catch (error) {
         console.log("whoops", error);
