@@ -91,7 +91,7 @@ async function getJoke() {
         };
 
         jokeText.innerHTML = joke;
-        f
+
 
         textToSpeech(joke);
 
