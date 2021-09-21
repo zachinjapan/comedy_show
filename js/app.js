@@ -57,7 +57,6 @@ miscellaneousButton.classList.remove("joke-type-button-on");
 // get joke from joke API
 async function getJoke() {
 
-    disableButton();
 
     // joke variable to use in the if statment to determine if it is a two part joke
     let joke = "";
@@ -93,10 +92,15 @@ async function getJoke() {
             joke = data.joke;
         };
 
+        // disables the new joke button for around the time of
+        disableButton((joke.length) * 95);
+
         jokeText.innerHTML = joke;
 
 
         textToSpeech(joke);
+
+
 
 
     } catch (error) {
@@ -125,6 +129,7 @@ function textToSpeech(text) {
         f: '44khz_16bit_stereo',
         ssml: false,
     });
+
 
 }
 
@@ -163,7 +168,7 @@ function changeTitle() {
 };
 
 
-function disableButton() {
+function disableButton(jokeLength) {
     button.innerText = "Audio Playing";
     button.style.opacity = (0.8);
     button.style.backgroundColor = ("black");
@@ -173,7 +178,7 @@ function disableButton() {
         button.style.opacity = (1);
         button.disabled = false;
         button.style.backgroundColor = ("darkmagenta");
-    }, 10000)
+    }, jokeLength)
 };
 
 // choose joke type function
