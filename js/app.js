@@ -1,5 +1,8 @@
+require('dotenv').config();
+
+console.log(process.env.API_KEY);
 // top secret free key 
-const key = "53fcb560bcac4b8dbdf39007958f99b7";
+const key = process.env.API_KEY
 
 // DOM Elements
 

@@ -1,0 +1,26 @@
+{
+  "name": "comedy-show2",
+  "version": "1.0.0",
+  "description": "Goal: create a website where you can hear jokes told by a robot.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachinjapan/comedy-show-2.git"
+  },
+  "author": "Zach Stone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachinjapan/comedy-show-2/issues"
+  },
+  "homepage": "https://github.com/zachinjapan/comedy-show-2#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "babel-loader": "^8.2.2",
+    "dotenv": "^10.0.0",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.8.0"
+  }
+}
