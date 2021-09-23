@@ -72,18 +72,18 @@ async function getJoke() {
     };
     try {
         // fetch the api
-        const response = await fetch(apiUrl);
+        let response = await fetch(apiUrl);
         // put the response into a variable
-        const data = await response.json();
+        let data = await response.json();
 
         // testing if it is a one part or two part joke
-        if (data.id !== 135 & data.id !== 177) {
-            // have a party
+        if (data.id !== 135 & data.id !== 177 & data.id !== 138 & data.id !== 117) {
+            console.log("joke ok");
         } else {
             // fetch the api
-            const response = await fetch(apiUrl);
+            response = await fetch(apiUrl);
             // put the response into a variable
-            const data = await response.json();
+            data = await response.json();
         }
 
         if (data.setup) {
@@ -96,6 +96,8 @@ async function getJoke() {
         disableButton((joke.length) * 95);
 
         jokeText.innerHTML = joke;
+
+        console.log(data)
 
 
         textToSpeech(joke);
