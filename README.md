@@ -9,25 +9,24 @@
     <img src="https://img.shields.io/tokei/lines/github/zachinjapan/comedy_show?style=plastic" alt="Total Lines" />
     <img src="https://img.shields.io/github/last-commit/zachinjapan/comedy_show?style=plastic" alt="Last Commit" />  
     <img src="https://img.shields.io/github/issues/zachinjapan/comedy_show?style=plastic" alt="Issues" />  
-    <img src="https://img.shields.io/github/followers/CliffordMorin?style=social" alt="Followers" />  
+    <img src="https://img.shields.io/github/followers/zachinjapan?style=social" alt="Followers" />  
 </p>
 
 [![MIT](https://img.shields.io/badge/license-MIT-green?style=plastic)](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
 
 ## Description
 
-This is a static webpage using 2 APIs. The first is a joke api which adds the text to the second text-to-speech API. The user is able to interact with the page by chaning the topics, playing background music, and chaning the name of the robot.
+This is a static webpage using 2 APIs. The first is a joke api which fetches the joke text. The second text-to-speech API plays that joke text. The user is able to interact with the page by chaning the topics, playing background music, and changing the name of the robot.
 
 ## User Story
 
 ```
-I want to hear a selection of funny jokes.
+I am bored and want to hear a selection of funny jokes.
 ```
 
 ## Table of Contents
 
 - [Usage](#usage)
-- [Mobile View](#mobile-view)
 - [Links](#links)
 - [Technologies Used](#technologies-used)
 - [License](#license)
