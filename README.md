@@ -7,11 +7,6 @@
     <img src="https://img.shields.io/github/languages/code-size/zachinjapan/comedy_show?style=plastic" alt="Code Size" />
     <img src="https://img.shields.io/github/repo-size/zachinjapan/comedy_show?style=plastic" alt="Repo Size" />   
     <img src="https://img.shields.io/tokei/lines/github/zachinjapan/comedy_show?style=plastic" alt="Total Lines" />
-    <img src="https://img.shields.io/github/package-json/dependency-version/zachinjapan/comedy_show/react?style=plastic" alt="React Version" />
-    <img src="https://img.shields.io/github/package-json/dependency-version/zachinjapan/comedy_show/react-bootstrap?style=plastic" alt="React bootstrap Version" />
-    <img src="https://img.shields.io/github/package-json/dependency-version/zachinjapan/comedy_show/styled-components?style=plastic" alt="Styled-components Version" />
-     <img src="https://img.shields.io/github/package-json/dependency-version/zachinjapan/comedy_show/react-router-dom?style=plastic" alt="react-router-dom Version" />
-      <img src="https://img.shields.io/github/package-json/dependency-version/zachinjapan/comedy_show/framer-motion?style=plastic" alt="framer-motion Version" />
     <img src="https://img.shields.io/github/last-commit/zachinjapan/comedy_show?style=plastic" alt="Last Commit" />  
     <img src="https://img.shields.io/github/issues/zachinjapan/comedy_show?style=plastic" alt="Issues" />  
     <img src="https://img.shields.io/github/followers/CliffordMorin?style=social" alt="Followers" />  
