@@ -93,12 +93,9 @@ async function getJoke() {
         };
 
         // disables the new joke button for around the time of
-        disableButton((joke.length) * 95);
+        disableButton((joke.length) * 80);
 
-        jokeText.innerHTML = joke;
-
-        console.log(data)
-
+        jokeText.innerText = joke;
 
         textToSpeech(joke);
 
@@ -126,9 +123,9 @@ function textToSpeech(text) {
         key: key,
         src: jokeString,
         hl: 'en-us',
-        r: 0,
+        r: 1,
         c: 'mp3',
-        f: '44khz_16bit_stereo',
+        f: '16khz_8bit_mono',
         ssml: false,
     });
 
