@@ -1,5 +1,6 @@
 // top secret free key 
-const key = "53fcb560bcac4b8dbdf39007958f99b7";
+// const key = "88bf1bb3fa72425291be899bd46cff65";
+const key = "cc1d18c9b4854d36a6a0f4aa1892316d";
 
 // DOM Elements
 
@@ -33,7 +34,7 @@ const musicButton = document.getElementById("music");
 
 const nameButton = document.getElementById("name");
 
-const colorButton = document.getElementById("robot-color");
+const customJokeButton = document.getElementById("custom-joke");
 
 
 // variables to decide type of joke
@@ -44,14 +45,6 @@ let Spooky = "";
 let Dark = ""
 let Christmas = "";
 let Miscellaneous = "";
-
-programmingButton.classList.remove("joke-type-button-on");
-punButton.classList.remove("joke-type-button-on");
-spookyButton.classList.remove("joke-type-button-on");
-darkButton.classList.remove("joke-type-button-on");
-christmasButton.classList.remove("joke-type-button-on");
-miscellaneousButton.classList.remove("joke-type-button-on");
-
 
 
 // get joke from joke API
@@ -65,10 +58,8 @@ async function getJoke() {
         apiUrl = "https://v2.jokeapi.dev/joke/Programming,Pun,Spooky,Dark,Christmas,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
     } else {
         apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
-
-        fixFormating();
-
-        apiUrl = "https://v2.jokeapi.dev/joke/" + Programming + Pun + Spooky + Dark + Christmas + Miscellaneous + "?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+        // very important!! checks for ,? caused by changing topics which would break the url and then removes the comma
+        apiUrl = apiUrl.replace(',?', '?');
     };
     try {
         // fetch the api
@@ -93,7 +84,9 @@ async function getJoke() {
         };
 
         // disables the new joke button for around the time of
-        disableButton((joke.length) * 80);
+        disableJokeButton((joke.length) * 80);
+        disableStandardButton(nameButton, ((joke.length) * 80));
+        disableStandardButton(customJokeButton, ((joke.length) * 80));
 
         jokeText.innerText = joke;
 
@@ -107,7 +100,7 @@ async function getJoke() {
 
     }
 
-    resetFormating();
+    // resetFormating();
 };
 
 
@@ -159,15 +152,13 @@ nameButton.addEventListener("click", changeTitle);
 
 
 function changeTitle() {
-
     let newRobotName = prompt("What should we call this robot?")
     title.innerHTML = (newRobotName + "'s Comedy Show");
     document.querySelector("h3").innerHTML = (" Hello. My name is " + newRobotName + "<br><br> Want to hear a joke? <br><br> You can even select the topics!");
-    textToSpeech(jokeText.textContent);
 };
 
 
-function disableButton(jokeLength) {
+function disableJokeButton(jokeLength) {
     button.innerText = "Audio Playing";
     button.style.opacity = (0.8);
     button.style.backgroundColor = ("black");
@@ -180,117 +171,100 @@ function disableButton(jokeLength) {
     }, jokeLength)
 };
 
+function disableStandardButton(buttonName, jokeLength) {
+    buttonName.style.opacity = (0.5);
+    buttonName.disabled = true;
+    setTimeout(() => {
+        buttonName.style.opacity = (1);
+        buttonName.disabled = false;
+    }, jokeLength)
+};
+
 // choose joke type function
 
 
 programmingButton.addEventListener("click", function () {
-    if (Programming === "Programming,") {
-        programmingButton.classList.remove("joke-type-button-on");
-        Programming = "";
-
-    } else {
+    if (Programming === "") {
         programmingButton.classList.add("joke-type-button-on");
         Programming = "Programming,";
+
+    } else {
+        programmingButton.classList.remove("joke-type-button-on");
+        Programming = "";
     }
 });
 
 
 miscellaneousButton.addEventListener("click", function () {
-    if (Miscellaneous === "Miscellaneous") {
+    if (Miscellaneous === "") {
+        miscellaneousButton.classList.add("joke-type-button-on");
+        Miscellaneous = "Miscellaneous,";
+    } else {
         miscellaneousButton.classList.remove("joke-type-button-on");
         Miscellaneous = "";
-    } else {
-        miscellaneousButton.classList.add("joke-type-button-on");
-        Miscellaneous = "Miscellaneous";
     }
 });
 
 
 punButton.addEventListener("click", function () {
-    if (Pun === "Pun,") {
-        punButton.classList.remove("joke-type-button-on");
-        Pun = "";
-    } else {
+    if (Pun === "") {
         punButton.classList.add("joke-type-button-on");
         Pun = "Pun,";
+    } else {
+        punButton.classList.remove("joke-type-button-on");
+        Pun = "";
     }
 });
 
 
 spookyButton.addEventListener("click", function () {
-    if (Spooky === "Spooky,") {
-        spookyButton.classList.remove("joke-type-button-on");
-        Spooky = "";
-    } else {
+    if (Spooky === "") {
         spookyButton.classList.add("joke-type-button-on");
         Spooky = "Spooky,";
+    } else {
+        spookyButton.classList.remove("joke-type-button-on");
+        Spooky = "";
     }
 });
 
 
 darkButton.addEventListener("click", function () {
-    if (Dark === "Dark,") {
-        darkButton.classList.remove("joke-type-button-on");
-        Dark = "";
-    } else {
+    if (Dark === "") {
         darkButton.classList.add("joke-type-button-on");
         Dark = "Dark,";
+    } else {
+        darkButton.classList.remove("joke-type-button-on");
+        Dark = "";
     }
 });
 
 
 christmasButton.addEventListener("click", function () {
-    if (Christmas === "Christmas,") {
-        christmasButton.classList.remove("joke-type-button-on");
-        Christmas = "";
-    } else {
+    if (Christmas === "") {
         christmasButton.classList.add("joke-type-button-on");
         Christmas = "Christmas,";
+    } else {
+        christmasButton.classList.remove("joke-type-button-on");
+        Christmas = "";
     }
 });
 
-// fixes the formating to make sure the last tag doesn't end in a ,""
 
-function fixFormating() {
-    if (Miscellaneous === "" && Christmas === "" && Dark === "" && Spooky === "" && Pun === "") {
-        Programming = "Programming"
-    } else if (Miscellaneous === "" && Christmas === "" && Dark === "" && Spooky === "") {
-        Pun = "Pun"
-    } else if (Miscellaneous === "" && Christmas === "" && Dark === "") {
-        Spooky = "Spooky"
-    } else if (Miscellaneous === "" && Christmas === "") {
-        Dark = "Dark"
-    } else if (Miscellaneous === "" && Christmas === "Christmas,") {
-        Christmas = "Christmas";
-    } else {
-        console.log("didn't fix formatting ")
-    }
 
-}
+// function to write your own joke
 
-// resets the formating so that when tags are added and subtracted they include the comma and sets the stage for the fix formating function
+customJokeButton.addEventListener("click", customJokeSetup);
 
-function resetFormating() {
-
-    if (Christmas === "Christmas") {
-        Christmas = "Christmas,"
-    }
-
-    if (Dark === "Dark") {
-        Dark = "Dark,"
-    }
-
-    if (Spooky === "Spooky") {
-        Spooky = "Spooky,"
-    }
-
-    if (Pun === "Pun") {
-        Pun = "Pun,"
-    }
-
-    if (Programming === "Programming") {
-        Programming = "Programming,"
-    } else {
-        console.log("No reset formating needed")
-    }
+function customJokeSetup() {
+    let newJoke = prompt("What joke would you like the robot to say? (it will give a 10 second countdown beore displaying)")
+    let countdown = "10,9,8,7,6,5,4,3,2,1"
+    document.querySelector("h3").innerHTML = (countdown);
+    disableJokeButton(10000 + (newJoke.length * 80));
+    disableStandardButton(nameButton, (10000 + (newJoke.length * 80)));
+    disableStandardButton(customJokeButton, (10000 + (newJoke.length * 80)));
+    textToSpeech(countdown);
+    setTimeout(() => {
+        document.querySelector("h3").innerHTML = newJoke;
+        textToSpeech(newJoke);
+    }, 6500)
 }
