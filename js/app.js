@@ -256,7 +256,7 @@ christmasButton.addEventListener("click", function () {
 customJokeButton.addEventListener("click", customJokeSetup);
 
 function customJokeSetup() {
-    let newJoke = prompt("What joke would you like the robot to say? (it will give a 10 second countdown beore displaying)")
+    let newJoke = prompt("\nWhat joke would you like the robot to say?\n\n(it will give a 10 second countdown beore displaying) \n")
     let countdown = "10,9,8,7,6,5,4,3,2,1"
     document.querySelector("h3").innerHTML = (countdown);
     disableJokeButton(10000 + (newJoke.length * 80));
