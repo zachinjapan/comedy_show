@@ -1,6 +1,5 @@
 // top secret free key 
-// const key = "88bf1bb3fa72425291be899bd46cff65";
-const key = "cc1d18c9b4854d36a6a0f4aa1892316d";
+const key = "88bf1bb3fa72425291be899bd46cff65";
 
 // DOM Elements
 
