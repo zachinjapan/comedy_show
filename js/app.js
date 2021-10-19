@@ -137,7 +137,13 @@ function backgroundMusic() {
     music.play();
     musicButtonClickCount++;
     alert(
-      "Song: Sexy Bit Jazz \r\nArtist: Circuit Bent\r\n URL: https://circuitbentobox.bandcamp.com"
+      `
+        
+       Song: Sexy Bit Jazz
+       
+       Artist: Circuit Bent
+       
+       URL: https://circuitbentobox.bandcamp.com`
     );
   } else {
     music.pause();
