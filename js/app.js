@@ -1,5 +1,5 @@
 // top secret free key
-const key = KEY;
+const key = "88bf1bb3fa72425291be899bd46cff65";
 
 // DOM Elements
 
