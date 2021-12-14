@@ -75,9 +75,10 @@ async function getJoke() {
       (data.id !== 135) &
       (data.id !== 177) &
       (data.id !== 138) &
+      (data.id !== 117) &
+      (data.id !== 310) &
       (data.id !== 117)
     ) {
-      console.log("joke ok");
     } else {
       // fetch the api
       response = await fetch(apiUrl);
