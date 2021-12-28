@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robot Comedy Show</title>
-    <link rel="stylesheet" href="dist/styles.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
     <link rel="shortcut icon" type="image/jpg" href="images/robot.png" />
-    <script src="https://kit.fontawesome.com/3cbe63e5a2.js" crossorigin="anonymous"></script>
-</head>
+    <script
+      src="https://kit.fontawesome.com/3cbe63e5a2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <h1>_C32F's Comedy Show
-        </h1>
-        <button id="joke-button">New Joke</button>
-        <h3>Hello. My name is _C32F. <br><br>Want to hear a joke? <br><br> You can even
-            select the topics!
-        </h3>
-        <div class="joke-type-row">
-            <button class="joke-type-button" id="programming">Programming</button>
-            <button class="joke-type-button" id="miscellaneous">Misc.</button>
-            <button class="joke-type-button" id="pun">Pun</button>
-            <button class="joke-type-button" id="spooky">Spooky</button>
-            <button class="joke-type-button" id="dark">Dark</button>
-            <button class="joke-type-button" id="christmas">Christmas</button>
-        </div>
-        <div class="setting-row">
-            <button class="setting-button-row" id="music"><img src="images/icons8-musical-notes-30.png"
-                    alt="music tag"></button>
-            <button class="setting-button-row" id="name"><img src="images/icons8-name-tag-woman-horizontal-30.png"
-                    alt="name tag"></button>
-            <button class="setting-button-row" id="custom-joke"><img src="images/icons8-message-30.png"
-                    alt="name tag"></button>
-        </div>
-        <div class=" text-background"></div>
-        <div id="robot" class="dancing-robot"></div>
-
+      <h1>_C32F's Comedy Show</h1>
+      <button id="joke-button">New Joke</button>
+      <h3>
+        Hello. My name is _C32F. <br /><br />Want to hear a joke? <br /><br />
+        You can even select the topics!
+      </h3>
+      <div class="joke-type-row">
+        <button class="joke-type-button" id="programming">Programming</button>
+        <button class="joke-type-button" id="miscellaneous">Misc.</button>
+        <button class="joke-type-button" id="pun">Pun</button>
+        <button class="joke-type-button" id="spooky">Spooky</button>
+        <button class="joke-type-button" id="dark">Dark</button>
+        <button class="joke-type-button" id="christmas">Christmas</button>
+      </div>
+      <div class="setting-row">
+        <button class="setting-button-row" id="music">
+          <img src="images/icons8-musical-notes-30.png" alt="music tag" />
+        </button>
+        <button class="setting-button-row" id="name">
+          <img
+            src="images/icons8-name-tag-woman-horizontal-30.png"
+            alt="name tag"
+          />
+        </button>
+        <button class="setting-button-row" id="custom-joke">
+          <img src="images/icons8-message-30.png" alt="name tag" />
+        </button>
+      </div>
+      <div class="text-background"></div>
+      <div id="robot" class="dancing-robot"></div>
     </div>
 
-
     <!-- text to voice script -->
-    <script src='js/voicerss-tts.min.js'></script>
+    <script src="js/voicerss-tts.min.js"></script>
     <script src="js/app.js"></script>
-</body>
-
+  </body>
 </html>

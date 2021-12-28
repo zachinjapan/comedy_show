@@ -58,7 +58,7 @@ async function getJoke() {
     Miscellaneous === ""
   ) {
     apiUrl =
-      "https://v2.jokeapi.dev/joke/Programming,Pun,Spooky,Dark,Christmas,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
+      "https://v2.jokeapi.dev/joke/Programming,Pun,Spooky,Christmas,Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist,explicit";
   } else {
     apiUrl = `https://v2.jokeapi.dev/joke/${Programming}${Pun}${Spooky}${Dark}${Christmas}${Miscellaneous}?blacklistFlags=nsfw,religious,political,racist,sexist,explicit`;
     // very important!! checks for ,? caused by changing topics which would break the url and then removes the comma
